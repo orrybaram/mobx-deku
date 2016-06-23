@@ -1,6 +1,8 @@
 import {autorun} from 'mobx';
 
-export default function observer (target) {
+exports.observer = observer;
+
+function observer (target) {
   let _unsubscriber = null;
   let _render = target.render;
   let _beforeUnmount = target.beforeUnmount;
@@ -41,13 +43,13 @@ function _shouldUpdate (component, nextProps, nextState) {
   }
   // update if props are shallowly not equal, inspired by PureRenderMixin
   let keys = Object.keys(props);
-  let key;
 
   if (keys.length !== Object.keys(nextProps).length) {
     return true;
   }
 
-  for (var i = keys.length - 1; i >= 0, key = keys[i]; i--) {
+  for (var i = keys.length - 1; i >= 0; i--) {
+    let key = keys[i];
     if (nextProps[key] !== props[key]) {
       return true;
     }
