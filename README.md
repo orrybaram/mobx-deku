@@ -15,7 +15,7 @@ import {observer} from "mobx-deku";
 
 const TodoView = observer({
     render({props}) {
-        return <div>{this.props.todo.title}</div>
+        return <div>{props.todo.title}</div>
     }
 }));
 
