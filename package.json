@@ -1,6 +1,6 @@
 {
   "name": "mobx-deku",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mobx bindings for deku",
   "main": "index.js",
   "scripts": {
