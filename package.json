@@ -4,9 +4,7 @@
   "description": "mobx bindings for deku",
   "main": "index.js",
   "scripts": {
-    "test": "ava test/test.js --verbose && semistandard | snazzy",
-    "build": "webpack",
-    "prepublish": "webpack"
+    "test": "ava test/test.js --verbose && semistandard | snazzy"
   },
   "repository": {
     "type": "git",
@@ -28,7 +26,6 @@
   "devDependencies": {
     "ava": "^0.15.2",
     "babel-eslint": "^6.1.0",
-    "babel-loader": "^6.2.4",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
