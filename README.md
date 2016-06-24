@@ -21,8 +21,10 @@ const appState = new AppState();
 const App = observer({
   render ({props}) {
     return (
-      <div class='app'>{props.appState.counter}</div>
-      <button onClick={onClick}></button>
+      <div>
+        <div class='app'>{props.appState.counter}</div>
+        <button onClick={onClick}>+</button>
+      </div>
     );
     function onClick () {
       props.appState.increaseCounter();
