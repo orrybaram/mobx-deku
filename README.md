@@ -3,6 +3,9 @@ Package with deku component wrapper for combining deku with mobx. Exports the ob
 
 `npm install mobx-deku`
 
+## Boilerplate Projects that use mobx-deku
+* Minimal MobX, deku, ES6, JSX, Hot reloading: [mobx-deku-boilerplate](https://github.com/orrybaram/mobx-deku-boilerplate)
+
 ## API documentation
 
 ### observer(component)
