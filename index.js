@@ -3,13 +3,13 @@ import {autorun} from 'mobx';
 exports.observer = observer;
 
 function observer (target) {
+  const _render = target.render;
+  const _beforeUnmount = target.beforeUnmount;
   let _unsubscriber = null;
-  let _render = target.render;
-  let _beforeUnmount = target.beforeUnmount;
   let _updateCount = 0;
 
   target.render = (component, setState) => {
-    var result;
+    let result;
     if (_unsubscriber) {
       _unsubscriber();
     }
@@ -36,7 +36,7 @@ function observer (target) {
 }
 
 function _shouldUpdate (component, nextProps, nextState) {
-  let {props, state} = component;
+  const {props, state} = component;
   // update on any state changes (as is the default)
   if (state !== nextState) {
     return true;
@@ -48,8 +48,8 @@ function _shouldUpdate (component, nextProps, nextState) {
     return true;
   }
 
-  for (var i = keys.length - 1; i >= 0; i--) {
-    let key = keys[i];
+  for (let i = keys.length - 1; i >= 0; i--) {
+    const key = keys[i];
     if (nextProps[key] !== props[key]) {
       return true;
     }
