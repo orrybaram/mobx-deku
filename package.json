@@ -39,8 +39,7 @@
     "magic-virtual-element": "^1.0.6",
     "semistandard": "^8.0.0",
     "snazzy": "^4.0.0",
-    "tape": "^4.6.0",
-    "webpack": "^1.13.1"
+    "tape": "^4.6.0"
   },
   "ava": {
     "require": [
