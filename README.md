@@ -1,5 +1,5 @@
 # mobx-deku
-mobx bindings for deku
+Package with deku component wrapper for combining deku with mobx. Exports the observer function decorator. For documentation, see the [mobx](https://github.com/mobxjs/mobx) project.
 
 `npm install mobx-deku`
 
